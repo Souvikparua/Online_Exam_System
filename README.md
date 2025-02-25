@@ -51,3 +51,7 @@ Create MySQL database: online_exam
 Import SQL file: database/exam_db.sql
 
 Update config file: include/config.php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'online_exam');
