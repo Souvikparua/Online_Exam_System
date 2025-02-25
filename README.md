@@ -43,3 +43,11 @@ A web-based platform for conducting online examinations with automated evaluatio
    git clone https://github.com/Souvikparua/Online_Exam_System.git
    # Move to project directory
    cd Online_Exam_System
+
+3 . Database Configuration:
+
+Create MySQL database: online_exam
+
+Import SQL file: database/exam_db.sql
+
+Update config file: include/config.php
