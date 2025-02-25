@@ -56,14 +56,14 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'online_exam');
 
-4. Run Application:
+# Run Application:
 
-Start Apache and MySQL in XAMPP/WAMP
+**Start Apache and MySQL in XAMPP/WAMP
 
 Access via: http://localhost/Online_Exam_System
 
-Usage 🚀
-Admin Access:
+##Usage 🚀
+**Admin Access:
 
 URL: /admin
 
