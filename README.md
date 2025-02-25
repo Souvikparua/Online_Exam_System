@@ -47,9 +47,7 @@ A web-based platform for conducting online examinations with automated evaluatio
 3 . Database Configuration:
 
 Create MySQL database: online_exam
-
 Import SQL file: database/exam_db.sql
-
 Update config file: include/config.php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
