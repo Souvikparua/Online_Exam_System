@@ -56,7 +56,7 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'online_exam');
 
-Run Application:
+4. Run Application:
 
 Start Apache and MySQL in XAMPP/WAMP
 
