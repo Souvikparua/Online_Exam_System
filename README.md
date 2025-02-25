@@ -56,3 +56,71 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'online_exam');
 
+4. Run Application:
+
+Start Apache and MySQL in XAMPP/WAMP
+
+Access via: http://localhost/Online_Exam_System
+
+Usage 🚀
+Admin Access:
+
+URL: /admin
+
+Default Credentials: admin / admin123
+
+Features:
+
+Create/edit exams
+
+Manage questions
+
+View student results
+
+Generate reports
+
+Student Access:
+
+Register new account
+
+Features:
+
+View available exams
+
+Take timed exams
+
+View results history
+
+Download score reports
+
+Contributing 🤝
+Fork the repository
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit changes (git commit -m 'Add some AmazingFeature')
+
+Push to branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+Future Enhancements 🚧
+Add proctoring capabilities
+
+Implement question randomization
+
+Add live chat support
+
+Develop mobile application
+
+Integrate AI-based cheating detection
+
+License 📄
+This project is licensed under the MIT License - see LICENSE file for details
+
+Contact 📧
+Souvik Parua
+
+GitHub: @Souvikparua
+
+Email: [your-email@example.com]
