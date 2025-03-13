@@ -1,0 +1,134 @@
+/* teacher_dash.css */
+:root {
+    --primary-color: #e94584;
+    --secondary-color: #89c4f4;
+    --background-color: #16213e;
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --text-color: #ffffff;
+    --border-radius: 10px;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url('../images/feature1.png') no-repeat center center/cover, 
+                linear-gradient(135deg, #1a1a2e, #16213e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.nav-link {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav-link[href*="add_exam"]::before {
+    background-image: url('../images/exam-icon.svg');
+}
+
+.nav-link[href*="manage_exam"]::before {
+    background-image: url('../images/student-icon.svg');
+}
+
+.nav-link[href*="view_results"]::before {
+    background-image: url('../images/results-icon.svg');
+}
+
+/* .nav-link[href*="Logout"]::before {
+    background-image: url('../images/logout.svg');
+} */
+
+.nav-link.logout[href*="../logout"]::before {
+    background-image: url('../images/logout.svg')
+    /* background: rgba(255, 107, 107, 0.15);
+    border: 1px solid rgba(255, 107, 107, 0.2); */
+}
+
+.nav-link.logout:hover {
+    background: rgba(255, 107, 107, 0.25);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .dashboard-nav {
+        grid-template-columns: 1fr;
+    }
+    
+    .glass-card h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-link {
+        padding: 1.2rem;
+    }
+}

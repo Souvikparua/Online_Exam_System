@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #e0e0f5);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1, h2, h3 {
+    color: #444;
+    margin: 0 0 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Question Result Styles */
+.question-result {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-result:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question-result h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.question-result p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Pie Chart Styles */
+.pie-chart-container {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin: 30px 0;
+}
+
+.pie-chart {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    animation: grow 1s ease-in-out;
+}
+
+.pie-chart::after {
+    content: attr(data-percentage) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .pie-chart {
+        width: 140px;
+        height: 140px;
+    }
+
+    .pie-chart::after {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,245 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode .exam {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+body.dark-mode button {
+    background-color: #3498db;
+}
+
+body.dark-mode button:hover {
+    background-color: #2980b9;
+}
+
+body.dark-mode a {
+    color: #3498db;
+}
+
+body.dark-mode a:hover {
+    color: #2980b9;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+body.dark-mode h1 {
+    color: #ffffff;
+}
+
+/* Exam Cards */
+.exam {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exam:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.exam h2 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .exam h2 {
+    color: #ffffff;
+}
+
+.exam p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+body.dark-mode .exam p {
+    color: #cccccc;
+}
+
+/* Buttons */
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Back Link */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* No Exams Message */
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+body.dark-mode p {
+    color: #cccccc;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #db8c8c;
+    border: 1px solid #bb5353;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: #2d2d2d;
+    border-color: #404040;
+}
+
+.dark-mode-toggle .fa-sun {
+    display: none;
+}
+
+body.dark-mode .dark-mode-toggle .fa-moon {
+    display: none;
+}
+
+body.dark-mode .dark-mode-toggle .fa-sun {
+    display: block;
+}
+
+/* Loading Spinner */
+#loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+.fa-spinner {
+    margin-right: 10px;
+    font-size: 2rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Icons */
+.fa-pencil-alt,
+.fa-file-alt,
+.fa-info-circle,
+.fa-play,
+.fa-arrow-left {
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .exam h2 {
+        font-size: 1.5rem;
+    }
+
+    .exam p {
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
