@@ -85,7 +85,7 @@ function sendPasswordResetEmail($email, $token) {
         // Plain text version
         $mail->AltBody = "Reset your password: $resetLink";
         
-        // HTML version
+        // HTML version-v
         $mail->Body = "
             <html>
             <body>
