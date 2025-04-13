@@ -123,4 +123,4 @@ Souvik Parua
 
 GitHub: @Souvikparua
 
-Email: [your-email@example.com]
+Email: [paruasouvik32@gmail.com]
